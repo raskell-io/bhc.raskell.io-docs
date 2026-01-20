@@ -1,0 +1,74 @@
+# Zola configuration for BHC documentation
+# https://www.getzola.org/documentation/getting-started/configuration/
+
+base_url = "https://bhc.raskell.io/docs"
+title = "BHC Documentation"
+description = "Documentation for BHC, the Basel Haskell Compiler."
+default_language = "en"
+theme = "brutalist-blueprint"
+
+# Compile Sass/SCSS
+compile_sass = true
+
+# Generate feed
+generate_feeds = false
+
+# Build options
+build_search_index = true
+minify_html = true
+
+[markdown]
+smart_punctuation = true
+external_links_target_blank = true
+external_links_no_follow = true
+external_links_no_referrer = true
+
+[markdown.highlighting]
+enabled = true
+light_theme = "catppuccin-latte"
+dark_theme = "catppuccin-mocha"
+
+[slugify]
+paths = "on"
+anchors = "on"
+
+[search]
+include_title = true
+include_description = true
+include_path = true
+include_content = true
+index_format = "elasticlunr_javascript"
+
+[extra]
+# Theme mode
+mode = "docs"
+
+# Brand
+brand_short = "BHC"
+
+# Site metadata
+author = "raskell.io"
+github_repo = "https://github.com/raskell-io/bhc"
+product_url = "https://bhc.raskell.io"
+
+# SEO metadata
+keywords = "bhc, basel haskell compiler, haskell, documentation, tutorial, guide, profiles, wasm"
+
+# Social links
+github = "https://github.com/raskell-io/bhc"
+
+# Documentation configuration
+[extra.docs]
+versioned = false
+default_version = "latest"
+
+# Navigation
+[[extra.nav_links]]
+name = "Home"
+url = "https://bhc.raskell.io"
+external = true
+
+[[extra.nav_links]]
+name = "GitHub"
+url = "https://github.com/raskell-io/bhc"
+external = true

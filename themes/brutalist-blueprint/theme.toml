@@ -1,0 +1,12 @@
+[theme]
+name = "brutalist-blueprint"
+description = "A brutalist documentation theme for BHC"
+license = "MIT"
+homepage = "https://bhc.raskell.io"
+min_version = "0.18.0"
+
+[author]
+name = "raskell.io"
+homepage = "https://raskell.io"
+
+[extra]
