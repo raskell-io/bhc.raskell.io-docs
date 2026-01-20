@@ -40,8 +40,9 @@
 
     <!-- Search index for docs -->
     {% if config.build_search_index %}
-    <script src="{{ get_url(path='search_index.en.js', cachebust=true) | safe }}" defer></script>
     <script src="{{ get_url(path='elasticlunr.min.js', cachebust=true) | safe }}" defer></script>
+    <script src="{{ get_url(path='search_index.en.js', cachebust=true) | safe }}" defer></script>
+    <script src="{{ get_url(path='js/search.js', cachebust=true) | safe }}" defer></script>
     {% endif %}
 
     <!-- Theme toggle script (before content to prevent flash) -->
@@ -57,6 +58,10 @@
 
     <div class="layout">
         {% include "partials/header.html" %}
+
+    {% if config.build_search_index %}
+    {% include "partials/search.html" %}
+    {% endif %}
 
         <main class="main" role="main">
             <div class="main__container">
