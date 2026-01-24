@@ -66,3 +66,4 @@ bhc build
 - Learn about [Runtime Profiles](/docs/profiles/) in detail
 - Explore [Compilation Targets](/docs/targets/)
 - Review [GHC Compatibility](/docs/compatibility/)
+- Browse the [API Reference](https://bhc.raskell.io/docs/api/) for function signatures and documentation

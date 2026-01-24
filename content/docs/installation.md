@@ -49,3 +49,4 @@ bhc 0.1.0 (alpha)
 - Read the [Quick Start](/docs/quickstart/) guide to compile your first program
 - Learn about [Runtime Profiles](/docs/profiles/) to optimize for your use case
 - Explore [Compilation Targets](/docs/targets/) for WASM and native builds
+- Browse the [API Reference](https://bhc.raskell.io/docs/api/) for Prelude and standard library docs

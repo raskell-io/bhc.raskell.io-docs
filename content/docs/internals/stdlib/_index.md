@@ -9,6 +9,8 @@ sort_by = "weight"
 
 The BHC standard library provides Rust-side support for Haskell's standard library. The high-level APIs are implemented in Haskell, while these Rust crates provide FFI primitives and performance-critical operations.
 
+For function signatures, type documentation, and usage examples, see the [API Reference](https://bhc.raskell.io/docs/api/).
+
 ## Architecture
 
 ```
