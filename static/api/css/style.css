@@ -121,6 +121,7 @@
 
   /* Layout */
   --sidebar-width: 280px;
+  --toc-width: 220px;
   --grid-size: 10px;
 }
 
@@ -470,6 +471,19 @@ article {
   padding: 0.75rem 1.5rem;
   border-bottom: 1px solid var(--color-grid);
   background: var(--color-bg-alt);
+}
+
+.page-header__bar--fixed {
+  position: fixed;
+  top: 0;
+  left: var(--sidebar-width);
+  right: var(--toc-width);
+  z-index: 50;
+  transition: top 0.25s ease-out;
+}
+
+.page-header__bar--fixed.hidden {
+  top: -60px;
 }
 
 .page-header__label {
@@ -1220,12 +1234,34 @@ article h4 {
 }
 
 .toc-sidebar.collapsed {
-  transform: translateX(calc(100% - 44px));
+  width: 40px;
+}
+
+.toc-sidebar.collapsed .toc-header {
+  flex-direction: column-reverse;
+  align-items: center;
+  padding: 0.75rem 0.5rem;
+  height: 100%;
+  border-bottom: none;
+}
+
+.toc-sidebar.collapsed .toc-label {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  margin-top: 1rem;
+  font-size: 9px;
+  white-space: nowrap;
+}
+
+.toc-sidebar.collapsed .toc-toggle {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
 }
 
 .toc-sidebar.collapsed .toc-content {
-  opacity: 0;
-  pointer-events: none;
+  display: none;
 }
 
 .toc-sidebar.collapsed .toc-toggle-icon {
@@ -1256,11 +1292,13 @@ article h4 {
   justify-content: center;
   width: 24px;
   height: 24px;
-  background: transparent;
+  background: var(--color-bg-alt);
   border: 1px solid var(--color-grid);
   color: var(--color-text-muted);
   cursor: pointer;
   transition: all 0.15s ease;
+  z-index: 100;
+  position: relative;
 }
 
 .toc-toggle:hover {
