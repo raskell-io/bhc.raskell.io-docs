@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BHC.Control.Applicative - BHC Documentation</title>
+    <title>BHC.Data.Function - BHC Documentation</title>
     <link rel="stylesheet" href="&#x2F;docs&#x2F;api/css/style.css">
     <script defer src="&#x2F;docs&#x2F;api/js/main.js"></script>
 </head>
@@ -154,7 +154,7 @@
             <a href="&#x2F;docs&#x2F;api/BHC-Control-Concurrent-Scope.html">BHC.Control.Concurrent.Scope</a>
         </li>
         
-        <li class="active">
+        <li >
             <a href="&#x2F;docs&#x2F;api/BHC-Control-Applicative.html">BHC.Control.Applicative</a>
         </li>
         
@@ -174,7 +174,7 @@
             <a href="&#x2F;docs&#x2F;api/BHC-Data-Either.html">BHC.Data.Either</a>
         </li>
         
-        <li >
+        <li class="active">
             <a href="&#x2F;docs&#x2F;api/BHC-Data-Function.html">BHC.Data.Function</a>
         </li>
         
@@ -299,85 +299,19 @@
         <div class="page-header__bar">
             <span class="page-header__label">Module</span>
             
-            <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;ba4c2ad9a9e3eb4dd22bb0ae5dd63d67ebcf8255&#x2F;stdlib&#x2F;bhc-base&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Applicative.hs" class="source-link" title="View source">
+            <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;ba4c2ad9a9e3eb4dd22bb0ae5dd63d67ebcf8255&#x2F;stdlib&#x2F;bhc-base&#x2F;hs&#x2F;BHC&#x2F;Data&#x2F;Function.hs" class="source-link" title="View source">
                 <span class="source-icon">{ }</span>
-                <span class="source-path">stdlib&#x2F;bhc-base&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Applicative.hs</span>
+                <span class="source-path">stdlib&#x2F;bhc-base&#x2F;hs&#x2F;BHC&#x2F;Data&#x2F;Function.hs</span>
             </a>
             
             
         </div>
         <div class="page-header__content">
-            <h1>BHC.Control.Applicative</h1>
+            <h1>BHC.Data.Function</h1>
             
         </div>
     </div>
 
-    
-    <!-- Types Section Frame -->
-    <div id="types" class="decl-section">
-        <div class="decl-section__header">
-            <span class="decl-section__label">Types</span>
-        </div>
-        <div class="decl-section__content">
-            
-            <div id="t:Const" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">newtype Const a b</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;ba4c2ad9a9e3eb4dd22bb0ae5dd63d67ebcf8255&#x2F;stdlib&#x2F;bhc-base&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Applicative.hs#L76" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#t:Const" class="anchor">#</a>
-                </div>
-                
-                <div class="constructors">
-                    
-                    <div class="constructor">
-                        <code>Const { getConst :: a }</code>
-                        
-                    </div>
-                    
-                </div>
-                
-                
-                <div class="decl-doc">
-                    The constant functor. Ignores the second type parameter.
-                </div>
-                
-            </div>
-            
-            <div id="t:ZipList" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">newtype ZipList a</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;ba4c2ad9a9e3eb4dd22bb0ae5dd63d67ebcf8255&#x2F;stdlib&#x2F;bhc-base&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Applicative.hs#L100" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#t:ZipList" class="anchor">#</a>
-                </div>
-                
-                <div class="constructors">
-                    
-                    <div class="constructor">
-                        <code>ZipList { getZipList :: [a] }</code>
-                        
-                    </div>
-                    
-                </div>
-                
-                
-                <div class="decl-doc">
-                    Lists with a zippy <a href="#Applicative">Applicative</a>. Unlike the default list instance,
-                </div>
-                
-            </div>
-            
-        </div>
-    </div>
     
 
     
@@ -390,103 +324,20 @@
         </div>
         <div class="decl-section__content">
             
-            <div id="v:&lt;**&gt;" class="decl">
+            <div id="v:applyWhen" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">&lt;**&gt; :: (Applicative f) =&gt; (f a) -&gt; (f (a -&gt; b)) -&gt; f b</code>
+                    <code class="decl-name">applyWhen :: Bool -&gt; (a -&gt; a) -&gt; a -&gt; a</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;ba4c2ad9a9e3eb4dd22bb0ae5dd63d67ebcf8255&#x2F;stdlib&#x2F;bhc-base&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Applicative.hs#L42" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;ba4c2ad9a9e3eb4dd22bb0ae5dd63d67ebcf8255&#x2F;stdlib&#x2F;bhc-base&#x2F;hs&#x2F;BHC&#x2F;Data&#x2F;Function.hs#L55" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
-                    <a href="#v:&lt;**&gt;" class="anchor">#</a>
+                    <a href="#v:applyWhen" class="anchor">#</a>
                 </div>
                 
                 <div class="decl-doc">
-                    <em>O(1)</em>. Flip of '<*>'. Apply a wrapped function to a wrapped value
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:optional" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">optional :: (Alternative f) =&gt; (f a) -&gt; f (Maybe a)</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;ba4c2ad9a9e3eb4dd22bb0ae5dd63d67ebcf8255&#x2F;stdlib&#x2F;bhc-base&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Applicative.hs#L54" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:optional" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    <em>O(1)</em>. Zero or one. Turns an <a href="#Alternative">Alternative</a> into an optional value.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:asum" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">asum :: (Foldable t, Alternative f) =&gt; (t (f a)) -&gt; f a</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;ba4c2ad9a9e3eb4dd22bb0ae5dd63d67ebcf8255&#x2F;stdlib&#x2F;bhc-base&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Applicative.hs#L63" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:asum" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    <em>O(n)</em>. Combine alternatives using '<|>'.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:&lt;*&gt;" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">&lt;*&gt; :: </code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;ba4c2ad9a9e3eb4dd22bb0ae5dd63d67ebcf8255&#x2F;stdlib&#x2F;bhc-base&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Applicative.hs#L84" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:&lt;*&gt;" class="anchor">#</a>
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:&lt;*&gt;" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">&lt;*&gt; :: </code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;ba4c2ad9a9e3eb4dd22bb0ae5dd63d67ebcf8255&#x2F;stdlib&#x2F;bhc-base&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Applicative.hs#L108" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:&lt;*&gt;" class="anchor">#</a>
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:&lt;|&gt;" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">&lt;|&gt; :: </code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;ba4c2ad9a9e3eb4dd22bb0ae5dd63d67ebcf8255&#x2F;stdlib&#x2F;bhc-base&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Applicative.hs#L112" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:&lt;|&gt;" class="anchor">#</a>
+                    <em>O(1)</em>. Conditionally apply a function.
                 </div>
                 
                 
@@ -496,40 +347,6 @@
     </div>
     
 
-    
-    <!-- Instances Section Frame -->
-    <div id="instances" class="decl-section">
-        <div class="decl-section__header">
-            <span class="decl-section__label">Instances</span>
-        </div>
-        <div class="decl-section__content">
-            
-            <div class="decl instance">
-                <div class="decl-header">
-                    <code class="decl-name">instance Functor (Const a)</code>
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;ba4c2ad9a9e3eb4dd22bb0ae5dd63d67ebcf8255&#x2F;stdlib&#x2F;bhc-base&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Applicative.hs#L79" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-            
-            <div class="decl instance">
-                <div class="decl-header">
-                    <code class="decl-name">instance Functor ZipList</code>
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;ba4c2ad9a9e3eb4dd22bb0ae5dd63d67ebcf8255&#x2F;stdlib&#x2F;bhc-base&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Applicative.hs#L103" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-            
-        </div>
-    </div>
     
 </article>
 
@@ -547,42 +364,17 @@
     <nav class="toc-content" id="toc-content">
         <ul class="toc-list">
             
-            <li class="toc-section">
-                <a href="#types" class="toc-section-link">Types</a>
-                <ul class="toc-items">
-                    
-                    <li><a href="#t:Const">Const</a></li>
-                    
-                    <li><a href="#t:ZipList">ZipList</a></li>
-                    
-                </ul>
-            </li>
-            
             
             
             <li class="toc-section">
                 <a href="#functions" class="toc-section-link">Functions</a>
                 <ul class="toc-items">
                     
-                    <li><a href="#v:&lt;**&gt;">&lt;**&gt;</a></li>
-                    
-                    <li><a href="#v:optional">optional</a></li>
-                    
-                    <li><a href="#v:asum">asum</a></li>
-                    
-                    <li><a href="#v:&lt;*&gt;">&lt;*&gt;</a></li>
-                    
-                    <li><a href="#v:&lt;*&gt;">&lt;*&gt;</a></li>
-                    
-                    <li><a href="#v:&lt;|&gt;">&lt;|&gt;</a></li>
+                    <li><a href="#v:applyWhen">applyWhen</a></li>
                     
                 </ul>
             </li>
             
-            
-            <li class="toc-section">
-                <a href="#instances" class="toc-section-link">Instances</a>
-            </li>
             
         </ul>
     </nav>
