@@ -167,6 +167,10 @@
         </li>
         
         <li >
+            <a href="&#x2F;docs&#x2F;api/Exception.html">Exception</a>
+        </li>
+        
+        <li >
             <a href="&#x2F;docs&#x2F;api/Category.html">Category</a>
         </li>
         
@@ -270,8 +274,24 @@
             <a href="&#x2F;docs&#x2F;api/IntMap.html">IntMap</a>
         </li>
         
+        <li class="active">
+            <a href="&#x2F;docs&#x2F;api/IO.html">IO</a>
+        </li>
+        
         <li >
             <a href="&#x2F;docs&#x2F;api/Encoding.html">Encoding</a>
+        </li>
+        
+        <li class="active">
+            <a href="&#x2F;docs&#x2F;api/IO.html">IO</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;docs&#x2F;api/Encoding.html">Encoding</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;docs&#x2F;api/Lazy.html">Lazy</a>
         </li>
         
         <li >
@@ -280,6 +300,14 @@
         
         <li >
             <a href="&#x2F;docs&#x2F;api/Builder.html">Builder</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;docs&#x2F;api/Char8.html">Char8</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;docs&#x2F;api/Lazy.html">Lazy</a>
         </li>
         
         <li >
@@ -299,9 +327,9 @@
         <div class="page-header__bar">
             <span class="page-header__label">Module</span>
             
-            <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;51d136f225510eb2b36fc675cfd9136cfca99c2f&#x2F;stdlib&#x2F;bhc-system&#x2F;hs&#x2F;BHC&#x2F;System&#x2F;IO.hs" class="source-link" title="View source">
+            <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;eba4ae5862bd32f0d445dbcd372461e420effae0&#x2F;stdlib&#x2F;bhc-text&#x2F;hs&#x2F;BHC&#x2F;Data&#x2F;Text&#x2F;IO.hs" class="source-link" title="View source">
                 <span class="source-icon">{ }</span>
-                <span class="source-path">stdlib&#x2F;bhc-system&#x2F;hs&#x2F;BHC&#x2F;System&#x2F;IO.hs</span>
+                <span class="source-path">stdlib&#x2F;bhc-text&#x2F;hs&#x2F;BHC&#x2F;Data&#x2F;Text&#x2F;IO.hs</span>
             </a>
             
             
@@ -313,134 +341,243 @@
     </div>
 
     
-    <!-- Types Section Frame -->
-    <div id="types" class="decl-section">
+
+    
+
+    
+    <!-- Functions Section Frame -->
+    <div id="functions" class="decl-section">
         <div class="decl-section__header">
-            <span class="decl-section__label">Types</span>
+            <span class="decl-section__label">Functions</span>
         </div>
         <div class="decl-section__content">
             
-            <div id="t:IOMode" class="decl">
+            <div id="v:readFile" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">data IOMode</code>
+                    <code class="decl-name">readFile :: FilePath -&gt; IO Text</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;51d136f225510eb2b36fc675cfd9136cfca99c2f&#x2F;stdlib&#x2F;bhc-system&#x2F;hs&#x2F;BHC&#x2F;System&#x2F;IO.hs#L75" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;eba4ae5862bd32f0d445dbcd372461e420effae0&#x2F;stdlib&#x2F;bhc-text&#x2F;hs&#x2F;BHC&#x2F;Data&#x2F;Text&#x2F;IO.hs#L47" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
-                    <a href="#t:IOMode" class="anchor">#</a>
-                </div>
-                
-                <div class="constructors">
-                    
-                    <div class="constructor">
-                        <code>ReadMode</code>
-                        
-                    </div>
-                    
-                    <div class="constructor">
-                        <code>WriteMode</code>
-                        
-                    </div>
-                    
-                    <div class="constructor">
-                        <code>AppendMode</code>
-                        
-                    </div>
-                    
-                    <div class="constructor">
-                        <code>ReadWriteMode</code>
-                        
-                    </div>
-                    
+                    <a href="#v:readFile" class="anchor">#</a>
                 </div>
                 
                 
             </div>
             
-            <div id="t:SeekMode" class="decl">
+            <div id="v:writeFile" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">data SeekMode</code>
+                    <code class="decl-name">writeFile :: FilePath -&gt; Text -&gt; IO ()</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;51d136f225510eb2b36fc675cfd9136cfca99c2f&#x2F;stdlib&#x2F;bhc-system&#x2F;hs&#x2F;BHC&#x2F;System&#x2F;IO.hs#L87" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;eba4ae5862bd32f0d445dbcd372461e420effae0&#x2F;stdlib&#x2F;bhc-text&#x2F;hs&#x2F;BHC&#x2F;Data&#x2F;Text&#x2F;IO.hs#L53" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
-                    <a href="#t:SeekMode" class="anchor">#</a>
+                    <a href="#v:writeFile" class="anchor">#</a>
                 </div>
-                
-                <div class="constructors">
-                    
-                    <div class="constructor">
-                        <code>AbsoluteSeek</code>
-                        
-                    </div>
-                    
-                    <div class="constructor">
-                        <code>RelativeSeek</code>
-                        
-                    </div>
-                    
-                    <div class="constructor">
-                        <code>SeekFromEnd</code>
-                        
-                    </div>
-                    
-                </div>
-                
                 
                 <div class="decl-doc">
-                    The mode for seeking within a file.
+                    Write <a href="#Text">Text</a> to a file, replacing its contents.
                 </div>
+                
                 
             </div>
             
-            <div id="t:BufferMode" class="decl">
+            <div id="v:appendFile" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">data BufferMode</code>
+                    <code class="decl-name">appendFile :: FilePath -&gt; Text -&gt; IO ()</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;51d136f225510eb2b36fc675cfd9136cfca99c2f&#x2F;stdlib&#x2F;bhc-system&#x2F;hs&#x2F;BHC&#x2F;System&#x2F;IO.hs#L98" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;eba4ae5862bd32f0d445dbcd372461e420effae0&#x2F;stdlib&#x2F;bhc-text&#x2F;hs&#x2F;BHC&#x2F;Data&#x2F;Text&#x2F;IO.hs#L57" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
-                    <a href="#t:BufferMode" class="anchor">#</a>
+                    <a href="#v:appendFile" class="anchor">#</a>
                 </div>
-                
-                <div class="constructors">
-                    
-                    <div class="constructor">
-                        <code>NoBuffering</code>
-                        
-                    </div>
-                    
-                    <div class="constructor">
-                        <code>LineBuffering</code>
-                        
-                    </div>
-                    
-                    <div class="constructor">
-                        <code>BlockBuffering (Maybe Int)</code>
-                        
-                    </div>
-                    
-                </div>
-                
                 
                 <div class="decl-doc">
-                    Buffering mode for a handle.
+                    Append <a href="#Text">Text</a> to a file.
                 </div>
+                
+                
+            </div>
+            
+            <div id="v:hGetContents" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">hGetContents :: Handle -&gt; IO Text</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;eba4ae5862bd32f0d445dbcd372461e420effae0&#x2F;stdlib&#x2F;bhc-text&#x2F;hs&#x2F;BHC&#x2F;Data&#x2F;Text&#x2F;IO.hs#L65" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:hGetContents" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Read the remaining contents of a <a href="#Handle">Handle<<em>a> as <a href="#Text">Text<</em>a>.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:hGetLine" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">hGetLine :: Handle -&gt; IO Text</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;eba4ae5862bd32f0d445dbcd372461e420effae0&#x2F;stdlib&#x2F;bhc-text&#x2F;hs&#x2F;BHC&#x2F;Data&#x2F;Text&#x2F;IO.hs#L71" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:hGetLine" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Read a single line from a <a href="#Handle">Handle<<em>a> as <a href="#Text">Text<</em>a>.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:hPutStr" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">hPutStr :: Handle -&gt; Text -&gt; IO ()</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;eba4ae5862bd32f0d445dbcd372461e420effae0&#x2F;stdlib&#x2F;bhc-text&#x2F;hs&#x2F;BHC&#x2F;Data&#x2F;Text&#x2F;IO.hs#L77" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:hPutStr" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Write <a href="#Text">Text<<em>a> to a <a href="#Handle">Handle<</em>a>.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:hPutStrLn" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">hPutStrLn :: Handle -&gt; Text -&gt; IO ()</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;eba4ae5862bd32f0d445dbcd372461e420effae0&#x2F;stdlib&#x2F;bhc-text&#x2F;hs&#x2F;BHC&#x2F;Data&#x2F;Text&#x2F;IO.hs#L81" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:hPutStrLn" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Write <a href="#Text">Text<<em>a> to a <a href="#Handle">Handle<</em>a>, followed by a newline.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:putStr" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">putStr :: Text -&gt; IO ()</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;eba4ae5862bd32f0d445dbcd372461e420effae0&#x2F;stdlib&#x2F;bhc-text&#x2F;hs&#x2F;BHC&#x2F;Data&#x2F;Text&#x2F;IO.hs#L89" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:putStr" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Write <a href="#Text">Text</a> to standard output.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:putStrLn" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">putStrLn :: Text -&gt; IO ()</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;eba4ae5862bd32f0d445dbcd372461e420effae0&#x2F;stdlib&#x2F;bhc-text&#x2F;hs&#x2F;BHC&#x2F;Data&#x2F;Text&#x2F;IO.hs#L93" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:putStrLn" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Write <a href="#Text">Text</a> to standard output, followed by a newline.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:getLine" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">getLine :: IO Text</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;eba4ae5862bd32f0d445dbcd372461e420effae0&#x2F;stdlib&#x2F;bhc-text&#x2F;hs&#x2F;BHC&#x2F;Data&#x2F;Text&#x2F;IO.hs#L97" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:getLine" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Read a line from standard input as <a href="#Text">Text</a>.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:getContents" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">getContents :: IO Text</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;eba4ae5862bd32f0d445dbcd372461e420effae0&#x2F;stdlib&#x2F;bhc-text&#x2F;hs&#x2F;BHC&#x2F;Data&#x2F;Text&#x2F;IO.hs#L101" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:getContents" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Read all input from standard input as <a href="#Text">Text</a>.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:interact" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">interact :: (Text -&gt; Text) -&gt; IO ()</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;eba4ae5862bd32f0d445dbcd372461e420effae0&#x2F;stdlib&#x2F;bhc-text&#x2F;hs&#x2F;BHC&#x2F;Data&#x2F;Text&#x2F;IO.hs#L105" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:interact" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Process standard input with a function and write to stdout.
+                </div>
+                
                 
             </div>
             
         </div>
     </div>
-    
-
-    
-
     
 
     
@@ -460,20 +597,38 @@
     <nav class="toc-content" id="toc-content">
         <ul class="toc-list">
             
+            
+            
             <li class="toc-section">
-                <a href="#types" class="toc-section-link">Types</a>
+                <a href="#functions" class="toc-section-link">Functions</a>
                 <ul class="toc-items">
                     
-                    <li><a href="#t:IOMode">IOMode</a></li>
+                    <li><a href="#v:readFile">readFile</a></li>
                     
-                    <li><a href="#t:SeekMode">SeekMode</a></li>
+                    <li><a href="#v:writeFile">writeFile</a></li>
                     
-                    <li><a href="#t:BufferMode">BufferMode</a></li>
+                    <li><a href="#v:appendFile">appendFile</a></li>
+                    
+                    <li><a href="#v:hGetContents">hGetContents</a></li>
+                    
+                    <li><a href="#v:hGetLine">hGetLine</a></li>
+                    
+                    <li><a href="#v:hPutStr">hPutStr</a></li>
+                    
+                    <li><a href="#v:hPutStrLn">hPutStrLn</a></li>
+                    
+                    <li><a href="#v:putStr">putStr</a></li>
+                    
+                    <li><a href="#v:putStrLn">putStrLn</a></li>
+                    
+                    <li><a href="#v:getLine">getLine</a></li>
+                    
+                    <li><a href="#v:getContents">getContents</a></li>
+                    
+                    <li><a href="#v:interact">interact</a></li>
                     
                 </ul>
             </li>
-            
-            
             
             
         </ul>

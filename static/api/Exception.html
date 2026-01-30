@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Except - BHC Documentation</title>
+    <title>Exception - BHC Documentation</title>
     <link rel="stylesheet" href="&#x2F;docs&#x2F;api/css/style.css">
     <script defer src="&#x2F;docs&#x2F;api/js/main.js"></script>
 </head>
@@ -166,7 +166,7 @@
             <a href="&#x2F;docs&#x2F;api/Monad.html">Monad</a>
         </li>
         
-        <li >
+        <li class="active">
             <a href="&#x2F;docs&#x2F;api/Exception.html">Exception</a>
         </li>
         
@@ -222,7 +222,7 @@
             <a href="&#x2F;docs&#x2F;api/Identity.html">Identity</a>
         </li>
         
-        <li class="active">
+        <li >
             <a href="&#x2F;docs&#x2F;api/Except.html">Except</a>
         </li>
         
@@ -327,15 +327,15 @@
         <div class="page-header__bar">
             <span class="page-header__label">Module</span>
             
-            <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;eba4ae5862bd32f0d445dbcd372461e420effae0&#x2F;stdlib&#x2F;bhc-transformers&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Monad&#x2F;Except.hs" class="source-link" title="View source">
+            <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;eba4ae5862bd32f0d445dbcd372461e420effae0&#x2F;stdlib&#x2F;bhc-base&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Exception.hs" class="source-link" title="View source">
                 <span class="source-icon">{ }</span>
-                <span class="source-path">stdlib&#x2F;bhc-transformers&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Monad&#x2F;Except.hs</span>
+                <span class="source-path">stdlib&#x2F;bhc-base&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Exception.hs</span>
             </a>
             
             
         </div>
         <div class="page-header__content">
-            <h1>Except</h1>
+            <h1>Exception</h1>
             
         </div>
     </div>
@@ -348,37 +348,46 @@
         </div>
         <div class="decl-section__content">
             
-            <div id="t:Except" class="decl">
+            <div id="t:SomeException" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">type Except e = ExceptT e Identity</code>
+                    <code class="decl-name">data SomeException</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;eba4ae5862bd32f0d445dbcd372461e420effae0&#x2F;stdlib&#x2F;bhc-transformers&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Monad&#x2F;Except.hs#L73" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;eba4ae5862bd32f0d445dbcd372461e420effae0&#x2F;stdlib&#x2F;bhc-base&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Exception.hs#L67" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
-                    <a href="#t:Except" class="anchor">#</a>
-                </div>
-                
-                
-            </div>
-            
-            <div id="t:ExceptT" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">newtype ExceptT e m a</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;eba4ae5862bd32f0d445dbcd372461e420effae0&#x2F;stdlib&#x2F;bhc-transformers&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Monad&#x2F;Except.hs#L88" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#t:ExceptT" class="anchor">#</a>
+                    <a href="#t:SomeException" class="anchor">#</a>
                 </div>
                 
                 <div class="constructors">
                     
                     <div class="constructor">
-                        <code>ExceptT { runExceptT :: m (Either e a) }</code>
+                        <code>SomeException String</code>
+                        
+                    </div>
+                    
+                </div>
+                
+                
+            </div>
+            
+            <div id="t:IOException" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">data IOException</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;eba4ae5862bd32f0d445dbcd372461e420effae0&#x2F;stdlib&#x2F;bhc-base&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Exception.hs#L94" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#t:IOException" class="anchor">#</a>
+                </div>
+                
+                <div class="constructors">
+                    
+                    <div class="constructor">
+                        <code>IOException String</code>
                         
                     </div>
                     
@@ -386,7 +395,197 @@
                 
                 
                 <div class="decl-doc">
-                    The exception monad transformer.
+                    An exception from the I/O subsystem.
+                </div>
+                
+            </div>
+            
+            <div id="t:ErrorCall" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">data ErrorCall</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;eba4ae5862bd32f0d445dbcd372461e420effae0&#x2F;stdlib&#x2F;bhc-base&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Exception.hs#L100" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#t:ErrorCall" class="anchor">#</a>
+                </div>
+                
+                <div class="constructors">
+                    
+                    <div class="constructor">
+                        <code>ErrorCall String</code>
+                        
+                    </div>
+                    
+                </div>
+                
+                
+                <div class="decl-doc">
+                    An exception from calling <a href="#error">error</a>.
+                </div>
+                
+            </div>
+            
+            <div id="t:ArithException" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">data ArithException</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;eba4ae5862bd32f0d445dbcd372461e420effae0&#x2F;stdlib&#x2F;bhc-base&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Exception.hs#L106" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#t:ArithException" class="anchor">#</a>
+                </div>
+                
+                <div class="constructors">
+                    
+                    <div class="constructor">
+                        <code>Overflow</code>
+                        
+                    </div>
+                    
+                    <div class="constructor">
+                        <code>Underflow</code>
+                        
+                    </div>
+                    
+                    <div class="constructor">
+                        <code>LossOfPrecision</code>
+                        
+                    </div>
+                    
+                    <div class="constructor">
+                        <code>DivideByZero</code>
+                        
+                    </div>
+                    
+                    <div class="constructor">
+                        <code>Denormal</code>
+                        
+                    </div>
+                    
+                    <div class="constructor">
+                        <code>RatioZeroDenominator</code>
+                        
+                    </div>
+                    
+                </div>
+                
+                
+                <div class="decl-doc">
+                    Arithmetic exceptions (division by zero, overflow, etc.).
+                </div>
+                
+            </div>
+            
+            <div id="t:AssertionFailed" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">data AssertionFailed</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;eba4ae5862bd32f0d445dbcd372461e420effae0&#x2F;stdlib&#x2F;bhc-base&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Exception.hs#L118" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#t:AssertionFailed" class="anchor">#</a>
+                </div>
+                
+                <div class="constructors">
+                    
+                    <div class="constructor">
+                        <code>AssertionFailed String</code>
+                        
+                    </div>
+                    
+                </div>
+                
+                
+                <div class="decl-doc">
+                    An assertion failure.
+                </div>
+                
+            </div>
+            
+            <div id="t:AsyncException" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">data AsyncException</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;eba4ae5862bd32f0d445dbcd372461e420effae0&#x2F;stdlib&#x2F;bhc-base&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Exception.hs#L124" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#t:AsyncException" class="anchor">#</a>
+                </div>
+                
+                <div class="constructors">
+                    
+                    <div class="constructor">
+                        <code>StackOverflow</code>
+                        
+                    </div>
+                    
+                    <div class="constructor">
+                        <code>HeapOverflow</code>
+                        
+                    </div>
+                    
+                    <div class="constructor">
+                        <code>ThreadKilled</code>
+                        
+                    </div>
+                    
+                    <div class="constructor">
+                        <code>UserInterrupt</code>
+                        
+                    </div>
+                    
+                </div>
+                
+                
+                <div class="decl-doc">
+                    Asynchronous exceptions.
+                </div>
+                
+            </div>
+            
+            <div id="t:MaskingState" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">data MaskingState</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;eba4ae5862bd32f0d445dbcd372461e420effae0&#x2F;stdlib&#x2F;bhc-base&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Exception.hs#L134" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#t:MaskingState" class="anchor">#</a>
+                </div>
+                
+                <div class="constructors">
+                    
+                    <div class="constructor">
+                        <code>Unmasked</code>
+                        
+                    </div>
+                    
+                    <div class="constructor">
+                        <code>MaskedInterruptible</code>
+                        
+                    </div>
+                    
+                    <div class="constructor">
+                        <code>MaskedUninterruptible</code>
+                        
+                    </div>
+                    
+                </div>
+                
+                
+                <div class="decl-doc">
+                    Masking state for asynchronous exceptions.
                 </div>
                 
             </div>
@@ -403,27 +602,32 @@
         </div>
         <div class="decl-section__content">
             
-            <div id="c:MonadError" class="decl">
+            <div id="c:Exception" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">class Monad m => MonadError e m</code>
+                    <code class="decl-name">class Show e => Exception e</code>
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;eba4ae5862bd32f0d445dbcd372461e420effae0&#x2F;stdlib&#x2F;bhc-transformers&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Monad&#x2F;Except.hs#L160" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;eba4ae5862bd32f0d445dbcd372461e420effae0&#x2F;stdlib&#x2F;bhc-base&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Exception.hs#L72" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
-                    <a href="#c:MonadError" class="anchor">#</a>
+                    <a href="#c:Exception" class="anchor">#</a>
                 </div>
                 
                 <div class="class-methods">
                     <h4>Methods</h4>
                     
                     <div class="method">
-                        <code>throwError :: e -&gt; m a</code>
+                        <code>toException :: e -&gt; SomeException</code>
                         
                     </div>
                     
                     <div class="method">
-                        <code>catchError :: (m a) -&gt; (e -&gt; m a) -&gt; m a</code>
+                        <code>fromException :: SomeException -&gt; Maybe e</code>
+                        
+                    </div>
+                    
+                    <div class="method">
+                        <code>displayException :: e -&gt; String</code>
                         
                     </div>
                     
@@ -431,7 +635,7 @@
                 
                 
                 <div class="decl-doc">
-                    Class for monads with exceptions.
+                    The <a href="#Exception">Exception</a> typeclass. Types that can be thrown and
                 </div>
                 
             </div>
@@ -440,179 +644,6 @@
     </div>
     
 
-    
-    <!-- Functions Section Frame -->
-    <div id="functions" class="decl-section">
-        <div class="decl-section__header">
-            <span class="decl-section__label">Functions</span>
-        </div>
-        <div class="decl-section__content">
-            
-            <div id="v:runExcept" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">runExcept :: (Except e a) -&gt; Either e a</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;eba4ae5862bd32f0d445dbcd372461e420effae0&#x2F;stdlib&#x2F;bhc-transformers&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Monad&#x2F;Except.hs#L77" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:runExcept" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Run an Except.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:mapExcept" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">mapExcept :: ((Either e a) -&gt; Either e&#x27; b) -&gt; (Except e a) -&gt; Except e&#x27; b</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;eba4ae5862bd32f0d445dbcd372461e420effae0&#x2F;stdlib&#x2F;bhc-transformers&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Monad&#x2F;Except.hs#L81" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:mapExcept" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Map the result.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:withExcept" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">withExcept :: (e -&gt; e&#x27;) -&gt; (Except e a) -&gt; Except e&#x27; a</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;eba4ae5862bd32f0d445dbcd372461e420effae0&#x2F;stdlib&#x2F;bhc-transformers&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Monad&#x2F;Except.hs#L85" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:withExcept" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Transform the exception.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:&lt;*&gt;" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">&lt;*&gt; :: </code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;eba4ae5862bd32f0d445dbcd372461e420effae0&#x2F;stdlib&#x2F;bhc-transformers&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Monad&#x2F;Except.hs#L95" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:&lt;*&gt;" class="anchor">#</a>
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:&gt;&gt;=" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">&gt;&gt;= :: </code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;eba4ae5862bd32f0d445dbcd372461e420effae0&#x2F;stdlib&#x2F;bhc-transformers&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Monad&#x2F;Except.hs#L102" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:&gt;&gt;=" class="anchor">#</a>
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:mapExceptT" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">mapExceptT :: ((m (Either e a)) -&gt; n (Either e&#x27; b)) -&gt; (ExceptT e m a) -&gt; ExceptT e&#x27; n b</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;eba4ae5862bd32f0d445dbcd372461e420effae0&#x2F;stdlib&#x2F;bhc-transformers&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Monad&#x2F;Except.hs#L116" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:mapExceptT" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Map the inner computation.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:withExceptT" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">withExceptT :: (Functor m) =&gt; (e -&gt; e&#x27;) -&gt; (ExceptT e m a) -&gt; ExceptT e&#x27; m a</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;eba4ae5862bd32f0d445dbcd372461e420effae0&#x2F;stdlib&#x2F;bhc-transformers&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Monad&#x2F;Except.hs#L120" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:withExceptT" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Transform the exception.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:throwE" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">throwE :: (Monad m) =&gt; e -&gt; ExceptT e m a</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;eba4ae5862bd32f0d445dbcd372461e420effae0&#x2F;stdlib&#x2F;bhc-transformers&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Monad&#x2F;Except.hs#L136" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:throwE" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    <em>O(1)</em>. Signal an error, aborting the computation.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:catchE" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">catchE :: (Monad m) =&gt; (ExceptT e m a) -&gt; (e -&gt; ExceptT e&#x27; m a) -&gt; ExceptT e&#x27; m a</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;eba4ae5862bd32f0d445dbcd372461e420effae0&#x2F;stdlib&#x2F;bhc-transformers&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Monad&#x2F;Except.hs#L153" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:catchE" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    <em>O(1)</em>. Handle an error by running a recovery computation.
-                </div>
-                
-                
-            </div>
-            
-        </div>
-    </div>
     
 
     
@@ -625,9 +656,9 @@
             
             <div class="decl instance">
                 <div class="decl-header">
-                    <code class="decl-name">instance Functor m => Functor (ExceptT e m)</code>
+                    <code class="decl-name">instance Exception SomeException</code>
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;eba4ae5862bd32f0d445dbcd372461e420effae0&#x2F;stdlib&#x2F;bhc-transformers&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Monad&#x2F;Except.hs#L90" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;eba4ae5862bd32f0d445dbcd372461e420effae0&#x2F;stdlib&#x2F;bhc-base&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Exception.hs#L85" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
@@ -637,9 +668,9 @@
             
             <div class="decl instance">
                 <div class="decl-header">
-                    <code class="decl-name">instance MonadTrans (ExceptT e)</code>
+                    <code class="decl-name">instance Exception IOException</code>
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;eba4ae5862bd32f0d445dbcd372461e420effae0&#x2F;stdlib&#x2F;bhc-transformers&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Monad&#x2F;Except.hs#L108" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;eba4ae5862bd32f0d445dbcd372461e420effae0&#x2F;stdlib&#x2F;bhc-base&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Exception.hs#L97" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
@@ -649,9 +680,9 @@
             
             <div class="decl instance">
                 <div class="decl-header">
-                    <code class="decl-name">instance MonadIO m => MonadIO (ExceptT e m)</code>
+                    <code class="decl-name">instance Exception ErrorCall</code>
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;eba4ae5862bd32f0d445dbcd372461e420effae0&#x2F;stdlib&#x2F;bhc-transformers&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Monad&#x2F;Except.hs#L111" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;eba4ae5862bd32f0d445dbcd372461e420effae0&#x2F;stdlib&#x2F;bhc-base&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Exception.hs#L103" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
@@ -661,9 +692,33 @@
             
             <div class="decl instance">
                 <div class="decl-header">
-                    <code class="decl-name">instance Monad m => MonadError e (ExceptT e m)</code>
+                    <code class="decl-name">instance Exception ArithException</code>
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;eba4ae5862bd32f0d445dbcd372461e420effae0&#x2F;stdlib&#x2F;bhc-transformers&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Monad&#x2F;Except.hs#L164" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;eba4ae5862bd32f0d445dbcd372461e420effae0&#x2F;stdlib&#x2F;bhc-base&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Exception.hs#L115" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+            
+            <div class="decl instance">
+                <div class="decl-header">
+                    <code class="decl-name">instance Exception AssertionFailed</code>
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;eba4ae5862bd32f0d445dbcd372461e420effae0&#x2F;stdlib&#x2F;bhc-base&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Exception.hs#L121" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+            
+            <div class="decl instance">
+                <div class="decl-header">
+                    <code class="decl-name">instance Exception AsyncException</code>
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;eba4ae5862bd32f0d445dbcd372461e420effae0&#x2F;stdlib&#x2F;bhc-base&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Exception.hs#L131" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
@@ -694,9 +749,19 @@
                 <a href="#types" class="toc-section-link">Types</a>
                 <ul class="toc-items">
                     
-                    <li><a href="#t:Except">Except</a></li>
+                    <li><a href="#t:SomeException">SomeException</a></li>
                     
-                    <li><a href="#t:ExceptT">ExceptT</a></li>
+                    <li><a href="#t:IOException">IOException</a></li>
+                    
+                    <li><a href="#t:ErrorCall">ErrorCall</a></li>
+                    
+                    <li><a href="#t:ArithException">ArithException</a></li>
+                    
+                    <li><a href="#t:AssertionFailed">AssertionFailed</a></li>
+                    
+                    <li><a href="#t:AsyncException">AsyncException</a></li>
+                    
+                    <li><a href="#t:MaskingState">MaskingState</a></li>
                     
                 </ul>
             </li>
@@ -706,36 +771,11 @@
                 <a href="#classes" class="toc-section-link">Classes</a>
                 <ul class="toc-items">
                     
-                    <li><a href="#c:MonadError">MonadError</a></li>
+                    <li><a href="#c:Exception">Exception</a></li>
                     
                 </ul>
             </li>
             
-            
-            <li class="toc-section">
-                <a href="#functions" class="toc-section-link">Functions</a>
-                <ul class="toc-items">
-                    
-                    <li><a href="#v:runExcept">runExcept</a></li>
-                    
-                    <li><a href="#v:mapExcept">mapExcept</a></li>
-                    
-                    <li><a href="#v:withExcept">withExcept</a></li>
-                    
-                    <li><a href="#v:&lt;*&gt;">&lt;*&gt;</a></li>
-                    
-                    <li><a href="#v:&gt;&gt;=">&gt;&gt;=</a></li>
-                    
-                    <li><a href="#v:mapExceptT">mapExceptT</a></li>
-                    
-                    <li><a href="#v:withExceptT">withExceptT</a></li>
-                    
-                    <li><a href="#v:throwE">throwE</a></li>
-                    
-                    <li><a href="#v:catchE">catchE</a></li>
-                    
-                </ul>
-            </li>
             
             
             <li class="toc-section">
