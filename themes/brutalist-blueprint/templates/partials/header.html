@@ -21,7 +21,7 @@
         <nav class="header__nav" aria-label="Main navigation">
             {% if config.extra.nav_links %}
             {% for link in config.extra.nav_links %}
-            <a href="{% if link.url is starting_with(pat='http') %}{{ link.url | safe }}{% else %}{{ get_url(path=link.url | trim_start_matches(pat='/')) | safe }}{% endif %}" class="header__link" {% if link.external %}target="_blank" rel="noopener noreferrer"{% endif %}>
+            <a href="{% if link.external %}{{ link.url | safe }}{% else %}{{ get_url(path=link.url | trim_start_matches(pat='/')) | safe }}{% endif %}" class="header__link" {% if link.external %}target="_blank" rel="noopener noreferrer"{% endif %}>
                 {{ link.name }}
             </a>
             {% endfor %}
