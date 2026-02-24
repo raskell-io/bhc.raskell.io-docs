@@ -64,7 +64,7 @@ npm run build
 Code can be shared via URL parameters:
 
 ```
-https://playground.bhc.raskell.io/?code=base64_encoded_code
+https://playground.bhc.arcanist.sh/?code=base64_encoded_code
 ```
 
 ## Embedding
@@ -73,7 +73,7 @@ Embed the playground in documentation:
 
 ```html
 <iframe
-  src="https://playground.bhc.raskell.io/embed"
+  src="https://playground.bhc.arcanist.sh/embed"
   width="100%"
   height="400">
 </iframe>

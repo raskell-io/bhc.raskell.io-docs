@@ -67,7 +67,7 @@ Many pure Haskell packages work out of the box.
 
 ## Reporting Compatibility Issues
 
-If you encounter compatibility issues, please report them on [GitHub](https://github.com/raskell-io/bhc/issues) with:
+If you encounter compatibility issues, please report them on [GitHub](https://github.com/arcanist-sh/bhc/issues) with:
 
 1. The code that fails to compile
 2. The error message from BHC

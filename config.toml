@@ -1,7 +1,7 @@
 # Zola configuration for BHC documentation
 # https://www.getzola.org/documentation/getting-started/configuration/
 
-base_url = "https://bhc.raskell.io/docs"
+base_url = "https://bhc.arcanist.sh/docs"
 title = "BHC Documentation"
 description = "Documentation for BHC, the Basel Haskell Compiler."
 default_language = "en"
@@ -47,15 +47,15 @@ mode = "docs"
 brand_short = "BHC"
 
 # Site metadata
-author = "raskell.io"
-github_repo = "https://github.com/raskell-io/bhc"
-product_url = "https://bhc.raskell.io"
+author = "arcanist.sh"
+github_repo = "https://github.com/arcanist-sh/bhc"
+product_url = "https://bhc.arcanist.sh"
 
 # SEO metadata
 keywords = "bhc, basel haskell compiler, haskell, documentation, tutorial, guide, profiles, wasm"
 
 # Social links
-github = "https://github.com/raskell-io/bhc"
+github = "https://github.com/arcanist-sh/bhc"
 
 # Documentation configuration
 [extra.docs]
@@ -65,7 +65,7 @@ default_version = "latest"
 # Navigation
 [[extra.nav_links]]
 name = "Home"
-url = "https://bhc.raskell.io"
+url = "https://bhc.arcanist.sh"
 external = true
 
 [[extra.nav_links]]
@@ -75,5 +75,5 @@ external = false
 
 [[extra.nav_links]]
 name = "GitHub"
-url = "https://github.com/raskell-io/bhc"
+url = "https://github.com/arcanist-sh/bhc"
 external = true
