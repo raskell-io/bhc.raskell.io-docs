@@ -63,7 +63,7 @@ bhc build
 
 ## Next Steps
 
-- Learn about [Runtime Profiles](/docs/profiles/) in detail
-- Explore [Compilation Targets](/docs/targets/)
-- Review [GHC Compatibility](/docs/compatibility/)
-- Browse the [API Reference](https://bhc.arcanist.sh/docs/api/) for function signatures and documentation
+- Learn about [Runtime Profiles](@/docs/profiles/_index.md) in detail
+- Explore [Compilation Targets](@/docs/targets/_index.md)
+- Review [GHC Compatibility](@/docs/compatibility.md)
+- Browse the [API Reference](https://docs.arcanist.sh/bhc/docs/api/) for function signatures and documentation

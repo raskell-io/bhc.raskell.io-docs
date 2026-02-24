@@ -17,7 +17,7 @@ BHC runs on the following platforms:
 The recommended way to install BHC is using the install script:
 
 ```bash
-curl -fsSL https://bhc.arcanist.sh/install.sh | sh
+curl -fsSL https://arcanist.sh/bhc/install.sh | sh
 ```
 
 This will download the latest release and add `bhc` to your PATH.
@@ -46,7 +46,7 @@ bhc 0.1.0 (alpha)
 
 ## Next Steps
 
-- Read the [Quick Start](/docs/quickstart/) guide to compile your first program
-- Learn about [Runtime Profiles](/docs/profiles/) to optimize for your use case
-- Explore [Compilation Targets](/docs/targets/) for WASM and native builds
-- Browse the [API Reference](https://bhc.arcanist.sh/docs/api/) for Prelude and standard library docs
+- Read the [Quick Start](@/docs/quickstart.md) guide to compile your first program
+- Learn about [Runtime Profiles](@/docs/profiles/_index.md) to optimize for your use case
+- Explore [Compilation Targets](@/docs/targets/_index.md) for WASM and native builds
+- Browse the [API Reference](https://docs.arcanist.sh/bhc/docs/api/) for Prelude and standard library docs

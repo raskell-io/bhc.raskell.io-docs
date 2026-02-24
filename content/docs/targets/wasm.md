@@ -14,7 +14,7 @@ bhc --target=wasm32-wasi Main.hs -o main.wasm
 
 ## Requirements
 
-WASM compilation works best with the [edge profile](/docs/profiles/edge/):
+WASM compilation works best with the [edge profile](@/docs/profiles/edge.md):
 
 ```bash
 bhc --profile=edge --target=wasm32-wasi Main.hs -o main.wasm

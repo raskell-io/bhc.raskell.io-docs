@@ -6,4 +6,4 @@ sort_by = "weight"
 
 Welcome to the BHC documentation. Here you'll find guides for getting started, reference documentation for runtime profiles, compilation targets, and BHC-specific extensions.
 
-Looking for type signatures and function documentation? See the [API Reference](https://bhc.arcanist.sh/docs/api/) for the Prelude and standard library.
+Looking for type signatures and function documentation? See the [API Reference](https://docs.arcanist.sh/bhc/docs/api/) for the Prelude and standard library.
